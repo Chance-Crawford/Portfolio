@@ -127,4 +127,13 @@ wheelBtns.forEach((btn)=>{
         slides.children[changeIndex].dataset.current = true;
         delete currSlide.dataset.current;
     })
-})
+});
+
+// match media query to change contact me to contact
+
+const media = window.matchMedia('(max-width: 550px)')
+
+// Check if the media query is true
+if (media.matches) {
+  document.querySelector(".contact-me-a").innerHTML = "Contact";
+}
