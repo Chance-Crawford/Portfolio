@@ -81,7 +81,6 @@
 // Image carousel wheel
 
 let imgHeight = document.querySelector('.slide-img').offsetHeight;
-console.log(imgHeight);
 
 let wheelArr = document.querySelectorAll('.wheel');
 
