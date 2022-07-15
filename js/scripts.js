@@ -76,3 +76,56 @@
 	});
 
 })(jQuery);
+
+
+// Image carousel wheel
+
+let imgHeight = document.querySelector('.slide-img').offsetHeight;
+console.log(imgHeight);
+
+let wheelArr = document.querySelectorAll('.wheel');
+
+wheelArr.forEach((wheel)=>{
+    wheel.style.height = `${imgHeight}px`;
+});
+
+// checks to see if height of container is equal to absolute position child
+setInterval(()=>{
+    // full height of image including the border
+    let imgHeight = document.querySelector('.slide-img').offsetHeight;
+
+    if(wheelArr[0].offsetHeight === imgHeight){
+        return;
+    }
+
+    wheelArr.forEach((wheel)=>{
+        wheel.style.height = `${imgHeight}px`;
+    });
+
+}, 1000)
+
+// scroll through wheel
+const wheelBtns = document.querySelectorAll("[data-wheel-button]");
+
+wheelBtns.forEach((btn)=>{
+    btn.addEventListener("click", () => {
+        const wheelIndex = btn.dataset.wheelButton === "next" ? 1 : -1;
+        const slides = btn.closest("[data-wheel]").querySelector("[data-slides]");
+
+        const currSlide = slides.querySelector("[data-current]");
+        let changeIndex = [...slides.children].indexOf(currSlide) + wheelIndex;
+
+        // if the wheel index is at first slide and the "previous wheel button" is clicked 
+        // again, loop.
+        if(changeIndex < 0){
+            changeIndex = slides.children.length - 1;
+        }
+        // if at last slide, loop to the starting slide
+        if(changeIndex >= slides.children.length){
+            changeIndex = 0;
+        }
+
+        slides.children[changeIndex].dataset.current = true;
+        delete currSlide.dataset.current;
+    })
+})

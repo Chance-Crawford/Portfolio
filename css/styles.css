@@ -662,6 +662,60 @@ input[type='checkbox'] {
 } 
 /* end of hover animation */
 
+/* Image Carousel Wheel */
+
+.wheel{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.wheel-button{
+	background: rgba(0, 0, 0, 0.15);
+	padding: .4rem;
+	position: absolute;
+	cursor: pointer;
+	border: none;
+	font-size: 3rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	border-radius: .3rem;
+	z-index: 4;
+	transition: background-color .3s;
+}
+
+.wheel-button:hover,
+.wheel-button:focus{
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.prev-slide{
+	left: .75rem;
+}
+
+.next-slide{
+	right: .75rem;
+}
+
+.slide{
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	min-height: 100%;
+	opacity: 0;
+	transition: opacity .25s;
+	transition-delay: .25s;
+}
+
+.slide[data-current]{
+	transition-delay: .2s;
+	z-index: 2;
+	opacity: 1;
+}
+
+
+
 
 /*****************/
 /*     Works     */
@@ -986,6 +1040,10 @@ a:hover.back-to-top {
 /*************************/	
 
 @media (max-width: 549px){
+
+	.wheel-button{
+		font-size: 1.75rem;
+	}
 
 	.modal-header{
 		flex-wrap: wrap;

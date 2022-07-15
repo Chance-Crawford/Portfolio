@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
@@ -251,13 +252,31 @@
 
                             </div>
                             <!-- end of modal -->
+
                             <!-- project image click for modal -->
-                            <a href="#" class="" data-toggle="modal" data-target="#novelfiy">
-                                <!-- project image -->
-                                <img class="img-fluid click-img img-border" src="images/novelfiy.PNG" alt="novelfiy page">
-                                
-                            </a>
-                        </div> <!-- end of image-container -->
+                            <article aria-label="image carousel">
+                                <div data-wheel class="wheel">
+                                    <button class="wheel-button prev-slide" data-wheel-button="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <button class="wheel-button next-slide" data-wheel-button="next"><i class="fa-solid fa-chevron-right"></i></button>
+                                    <div data-slides>
+                                        <a href="#" class="slide" data-toggle="modal" data-target="#novelfiy" data-current>
+                                            <!-- project image -->
+                                            <img class="img-fluid click-img img-border slide-img" src="images/novelfiy.PNG" alt="novelfiy page">
+                                        </a>
+                                        <a href="#" class="slide" data-toggle="modal" data-target="#novelfiy">
+                                            <!-- project image -->
+                                            <img class="img-fluid click-img img-border slide-img" src="images/novelfiy 2.jpg" alt="novelfiy page 2">
+                                        </a>
+                                        <a href="#" class="slide" data-toggle="modal" data-target="#novelfiy">
+                                            <!-- project image -->
+                                            <img class="img-fluid click-img img-border slide-img" src="images/novelfiy 3.jpg" alt="novelfiy page 3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                        </div> 
+                        <!-- end of image-container -->
                         <!-- text below image -->
                         <div class="d-flex w-75 flex-wrap justify-content-center ml-auto mr-auto mt-4">
                             <p class="project-title">
