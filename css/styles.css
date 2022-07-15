@@ -506,6 +506,10 @@ input[type='checkbox'] {
 	color: #ffffff;
 }
 
+.contact-me-a{
+	white-space: nowrap;
+}
+
 .header .btn-solid-lg:hover {
 	border: 1px solid #ffffff;
 	color: #ffffff;
