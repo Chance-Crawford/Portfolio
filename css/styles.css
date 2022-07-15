@@ -709,7 +709,7 @@ input[type='checkbox'] {
 }
 
 .slide[data-current]{
-	transition-delay: .2s;
+	transition-delay: .15s;
 	z-index: 2;
 	opacity: 1;
 }
