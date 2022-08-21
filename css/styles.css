@@ -1073,6 +1073,10 @@ a:hover.back-to-top {
 		padding: 1rem;
 	}
 
+	.tech-font{
+		font-size: 1.25rem;
+	}
+
 }
 
 /* Min-width 768px */
